@@ -21,27 +21,32 @@
     <div class="container-login">
         <h2 class="form-title">Login</h2>
 
-        <form class="form-login" method="post" th:action="@{/employee/login}">
+        <form class="form-login" method="post" th:action="@{/j_spring_security_login}">
 
             <div class="form-input">
                 <i class="fa fa-user"></i>
-                <input type="text" placeholder="Your user name...." autofocus/>
+                <input type="text" placeholder="Your user name...." autofocus th:name="username"/>
             </div>
 
             <div class="form-input">
                 <i class="fa fa-lock"></i>
-                <input type="password" placeholder="Your password...." />
+                <input type="password" placeholder="Your password...." th:name="password"/>
             </div>
 
             <div class="form-remember">
                 <input type="checkbox"/>
                 <p>Remember me</p>
             </div>
-
+            <div class="social-login">
+                <button class="btn-login-facebook">
+                    <i class="fa fa-facebook-f"></i>
+                    <a href="https://www.facebook.com/dialog/oauth?client_id=135749334030688&redirect_uri=https://localhost:9999/login-facebook">Login with Facebook</a>
+                </button>
+            </div>
             <div class="form-button">
                 <button class="btn-login">LOGIN</button>
             </div>
-
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
         </form>
     </div>
 </div>

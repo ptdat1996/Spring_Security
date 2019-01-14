@@ -116,7 +116,33 @@ input:focus {
     color: white;
     border: none;
 }
+/*-------------------login with social---------------------*/
+.social-login {
+    display: grid;
+    margin-bottom: 30px;
+}
 
+.social-login .btn-login-facebook,
+.social-login .btn-login-google {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border-radius: 25px;
+    color: white;
+    border: 0;
+
+}
+
+.social-login .btn-login-facebook {
+    background-color: #395697;
+}
+.social-login a{
+    color: white;
+}
+.social-login i {
+    margin-right: 10px;
+}
 /*-------------------responsive---------------------*/
 @media(max-width : 400px) {
     .background-login {
